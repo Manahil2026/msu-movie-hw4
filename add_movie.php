@@ -67,7 +67,7 @@ if (isset($_POST['insert'])) {
         <label>
           Genre: <br>
           <input type="text" name="Genre" 
-                  v alue="<?= isset($title) ? htmlspecialchars($title) : '' ?>">
+                  value="<?= isset($title) ? htmlspecialchars($title) : '' ?>">
         </label>
 
 
