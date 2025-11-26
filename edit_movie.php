@@ -49,7 +49,7 @@ else{
 
 
     <!--Header-->
-    <a href="/index.php">Go Back</a>
+    <a href="index.php">Go Back</a>
     <center>
         <h1>MSU Movie Center</h1>
         <h4>Team Members: Manahil Imran, Anthony Dalauro, Jeanine Gomez, Angelee Sullivan-Quintana</h2>
@@ -58,8 +58,8 @@ else{
 
     
         <h1>Editing <?= $selectedMovie['MovieTitle'] ?></h1>
-        <form method="POST" action="/edit_movie.php">
-            <input type="hidden" name="id" value=<?= $selectedMovie['MovieID']?>> <!--Just need the id to change-->
+        <form method="POST" action="edit_movie.php">
+            <input type="hidden" name="id" value="<?= $selectedMovie['MovieID'] ?>"> <!--Just need the id to change-->
             <input type="text" name="title" placeholder="Title" value="<?= htmlspecialchars($selectedMovie['MovieTitle']) ?>">
             <input type="date" name="date" placeholder="Release date" value="<?= htmlspecialchars($selectedMovie['ReleaseDate']) ?>">
             <input type="text" name="genre" placeholder="Movie Genre" value="<?= htmlspecialchars($selectedMovie['Genre']) ?>">
