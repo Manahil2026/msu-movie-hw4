@@ -74,7 +74,8 @@ if (isset($_POST['insert'])) {
         <br><br>
         <button type="submit" name="insert">Insert Movie</button>
       </form>
-      <p>$copy; 2025 MSU</p>
+      <p>&copy; 2025 MSU</p>
     </center>
   </body>
 </html>
+
