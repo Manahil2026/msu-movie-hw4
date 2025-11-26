@@ -30,6 +30,7 @@ elseif(isset($_POST["MovieID"])){
     $stmt->bindValue("id", $movieID);
     $stmt->execute();
     $selectedMovie = $stmt->fetch();
+    $statement->closeCursor();
 }
 
 else{
