@@ -10,7 +10,7 @@ $error_message = '';
 
 if (isset($_POST['insert'])) {
   $title  = trim($_POST['MovieTitle'] ??'');
-  $release_date  = trim($_POST[ReleaseDate'] ?? '');
+  $release_date  = trim($_POST['ReleaseDate'] ?? '');
   $genre  = trim($_POST['Genre'] ?? '');
   
   if ($title === '' || $release_date === '' || $genre === '') {
@@ -47,8 +47,6 @@ if (isset($_POST['insert'])) {
 
       <h2>Add Movie</h2>
 
-      <?php end if; ?>
-
       <!-- Form to add a movie -->
       <form action="add_movie.php" method="POST">
         <label>
@@ -63,6 +61,16 @@ if (isset($_POST['insert'])) {
           <input type="text" name="ReleaseDate"
                   value="<?= isset($release_date) ? htmlspecialchars($release_date) : '' ?>">
         </label>
+      
+      
+        <br><br>
+        <label>
+          Genre: <br>
+          <input type="text" name="Genre" 
+                  v alue="<?= isset($title) ? htmlspecialchars($title) : '' ?>">
+        </label>
+
+
         <br><br>
         <button type="submit" name="insert">Insert Movie</button>
       </form>
