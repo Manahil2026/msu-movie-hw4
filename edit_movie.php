@@ -56,7 +56,7 @@ else{
     </center>
 
     
-        <h1>Edting <?= $selectedMovie['MovieTitle'] ?></h1>
+        <h1>Editing <?= $selectedMovie['MovieTitle'] ?></h1>
         <form method="POST" action="/edit_movie.php">
             <input type="hidden" name="id" value=<?= $selectedMovie['MovieID']?>> <!--Just need the id to change-->
             <input type="text" name="title" placeholder="Title" value="<?= htmlspecialchars($selectedMovie['MovieTitle']) ?>">
