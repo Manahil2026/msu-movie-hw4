@@ -3,7 +3,7 @@
     // Establish a databse connection
     // Copied from the instrcutions given by professor
 
-    $dsn = 'mysql:host=localhost;dbname=MSU_Movie';
+    $dsn = 'mysql:host=localhost;dbname=MSU_Movies';
     $username = 'mgs_user';
     $password = 'pa55word';
     try {
