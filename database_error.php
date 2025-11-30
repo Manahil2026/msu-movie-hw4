@@ -1,30 +1,5 @@
-//This page is done by Angelee Sullivan-Quintana
-//Page for database_error
 
-<?php
-session_start();
-require('database.php');
 
-$error_message = null;
-$movies = [];
-
-try {
-  if (isset($_POST['delete'])) {
-    $id = $_POST['MovieID'];
-    $query = "DELETE FROM Movie WHERE MovieID = :id";
-    $statement = $db->prepare($query);
-    $statement->bindValue(':id', $id);
-    $statement->execute();
-    $statement->closeCursor();
-
-  }
-
-  $query = "SELECT * FROM Movie ORDER BY MovieID";
-  $movies = $db->query($query)->fetchALL(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-  $error_message = $e->getMessage();
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -33,6 +8,8 @@ try {
     <title>MSU Movie Center</title>
   </head>
   <body>
+    <p>This page is done by Angelee Sullivan-Quintana</p>
+    <p>Page for database_error</p>
     <center>
       <h1>MSU Movie Center</h1>
       <h4>Team Members: Manahil Imran, Anthony Dalauro, Jeanine Gomez, Angelee Sullivan-Quintana</h4>

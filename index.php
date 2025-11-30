@@ -11,7 +11,6 @@
         $statement->execute();
         $statement->closeCursor();
 
-
     }
 
     //Query all movies from the databse
