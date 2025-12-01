@@ -4,15 +4,13 @@ body{
     color: #EDEDED;
 }
 
-
-
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1A1A1A;
     padding: 20px;
-    margin: 20px;
+    margin-bottom: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
 }
@@ -20,3 +18,64 @@ body{
 .header-content{
     text-align: center;
 }
+
+.main-area{
+    height: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    background-color: #1A1A1A;
+}
+
+.btn{
+    font-size: 15px;
+    text-decoration: none;
+    border: 4px black;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #b2c0d6;
+}
+
+.btn:hover{
+    background-color: #4d8ffa
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even){
+    background:#d9e9f5c5;
+}
+
+table tr:nth-child(odd){
+    background:#ffffffc5;
+}
+
+
+table td, table th{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.table-area{
+    text-align: center;
+}
+
+.movie-list{
+    color: black;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+
+
