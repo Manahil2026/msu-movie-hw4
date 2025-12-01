@@ -51,7 +51,7 @@ if (isset($_POST['insert'])) {
 
 
     <div class="main-area">
-      <h2>Adding a Movie</h2>
+      <h1>Adding a Movie</h1>
 
       <!-- Form to add a movie -->
       <div class="form-content">
