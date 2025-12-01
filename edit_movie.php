@@ -1,4 +1,5 @@
 <?php
+//This page was made by Ant.
 
 require('database.php');
 
@@ -46,12 +47,10 @@ else{
     <header>
         <title>Edit a Movie</title>
         <link rel="stylesheet" href="css/edit_movie.css">
-        
     </header>
     
     
     <body>
-
 
     <!--Header-->
     <div class="header">

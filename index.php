@@ -39,7 +39,7 @@
 
         <div class="main-area">
             <h2>Would you like to add a new movie?</h2>
-            <a class="button" href="add_movie.php">Add a New Movie</a>
+            <a class="btn" href="add_movie.php">Add a New Movie</a>
         
             <div class="table-area">
                 <h2>All Movies List (hint: scroll for more)</h2>
@@ -65,14 +65,14 @@
                                 <td>
                                     <form action="edit_movie.php" method="POST">
                                         <input type="hidden" name="MovieID" value="<?= $movie['MovieID']?>">
-                                        <button name="edit">Edit</button>
+                                        <button class="btn" name="edit">Edit</button>
                                     </form>
                                 </td>
                                 
                                 <td>
                                     <form action="index.php" method="POST">
                                         <input type="hidden" name="MovieID" value="<?= $movie['MovieID']?>">
-                                        <button name="delete">Delete</button>
+                                        <button class="btn" name="delete">Delete</button>
                                     </form>
                                 </td>
                             </tr>

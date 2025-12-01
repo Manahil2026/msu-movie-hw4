@@ -4,6 +4,7 @@ body{
     color: #EDEDED;
 }
 
+
 .header{
     display: flex;
     justify-content: center;
@@ -19,38 +20,34 @@ body{
     text-align: center;
 }
 
-.main-area {
-    height: 80%;
+.main-area{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
     padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     background-color: #1A1A1A;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
+    text-align: center;
 }
 
-
-.form-content{
-    color: black;
+.error-box{
+    max-width: 70%;
+    max-height: 250px;
     padding: 20px;
-    background-color: gray;
+    background-color: rgb(109, 23, 23);
     border-radius: 20px;
-    max-width: 45vw;
-}
-
-.input-group {
-    padding: 10px;
 }
 
 .btn{
     font-size: 15px;
+    text-decoration: none;
     border: 4px black;
     color: black;
-    text-decoration: none;
-    border-color: black;
     display: inline-block;
-    margin-top: 10px;
     text-align: center;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: #b2c0d6;
 }
 

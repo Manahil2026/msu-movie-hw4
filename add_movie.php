@@ -30,51 +30,55 @@ if (isset($_POST['insert'])) {
         }
  }
 ?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Add Movie - MSU Movie Center</title>
+    <link rel="stylesheet" href="css/add_movie.css">
   </head>
   <body>
-    <center>
-      <h1>MSU Movie Center</h1>
-      <h4>Team Members: Manahil Imran, Anthony D'Alauro, Jeanine Gomez, Angelee Sullivan-Quintana</h4>
 
-      <!-- nav links -->
-      <a href="add_movie.php">Add a New Movie</a>
-      <br><br>
 
-      <h2>Add Movie</h2>
+    <div class="header">
+      <div class="header-content">
+          <h1>MSU Movie Center</h1>
+          <h4>Team Members: Manahil Imran, Anthony Dalauro, Jeanine Gomez, Angelee Sullivan-Quintana</h2>
+      </div>
+    </div>
+
+
+    <div class="main-area">
+      <h2>Adding a Movie</h2>
 
       <!-- Form to add a movie -->
-      <form action="add_movie.php" method="POST">
-        <label>
-          Title:<br>
-          <input type="text" name="MovieTitle"
-                  value="<?= isset($title) ? htmlspecialchars($title) : '' ?>">
-        </label>
-        <br><br>
+      <div class="form-content">
+        <form action="add_movie.php" method="POST">
+            <div class="input-group">
+              <label>Enter a title for the new movie:</label>
+              <input type="text" name="MovieTitle" value="<?= isset($title) ? htmlspecialchars($title) : '' ?>">
+            </div>
+            
+            <div class="input-group">
+              <label>Enter the release date for the movie: </label>
+              <input type="date" name="ReleaseDate" value="<?= isset($release_date) ? htmlspecialchars($release_date) : '' ?>">
+            </div>
+          
+            <div class="input-group">
+              <label>Enter the Genre for the movie:</label>
+              <input type="text" name="Genre" value="<?= isset($genre) ? htmlspecialchars($genre) : '' ?>">
+            </div>
+                      
+          <button class="btn" type="submit" name="insert">Add The Movie</button>
+        </form>
+      </div>
 
-        <label>
-          Release Date (YYYY-MM-DD):<br>
-          <input type="text" name="ReleaseDate"
-                  value="<?= isset($release_date) ? htmlspecialchars($release_date) : '' ?>">
-        </label>
-      
-      
-        <br><br>
-        <label>
-          Genre: <br>
-          <input type="text" name="Genre" 
-                  value="<?= isset($genre) ? htmlspecialchars($genre) : '' ?>">
-        </label>
+      <a class="btn" href="index.php">Go back</a>
 
-
-        <br><br>
-        <button type="submit" name="insert">Insert Movie</button>
-      </form>
-    </center>
+    </div>
+    
   </body>
 </html>
 

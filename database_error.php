@@ -1,59 +1,37 @@
 
-
+<?php
+  //This page is done by Angelee Sullivan-Quintana</p>
+  //Page for database_error
+  
+  $err = $error_message ?? "Unkown Error"
+?>
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>MSU Movie Center</title>
+    <link rel="stylesheet" href="css/database_error.css">
   </head>
-  <body>
-    <p>This page is done by Angelee Sullivan-Quintana</p>
-    <p>Page for database_error</p>
-    <center>
-      <h1>MSU Movie Center</h1>
-      <h4>Team Members: Manahil Imran, Anthony Dalauro, Jeanine Gomez, Angelee Sullivan-Quintana</h4>
-      <a href="add_movie.php">Add a New Movie</a>
-      <br><br>
 
-      <?php if ($error_message): ?>
-          <h2>Database Error</h2>
-          <p>There was a problem accessing the database:</p>
-          <p><strong>Error Message:</strong> <?= htmlspecialchars($error_message) ?></p>
-          <a href="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>">Try Again</a>
-      <?php else: ?>
-          <h2>All Movies</h2>
-          <table border="1" cellpadding="10" cellspacing="0">
-              <tr>
-                <th>Movie ID</th>
-                <th>Title</th>
-                <th>Release Date</th>
-                <th>Genre</th>
-                <th>Update</th>
-                <th>Remove</th>
-              </tr>
-              <?php foreach ($movies as $movie): ?>
-                  <tr>
-                    <td><?= htmlspecialchars($movie['MovieID']) ?></td>
-                    <td><?= htmlspecialchars($movie['MovieTitle']) ?></td>
-                    <td><?= htmlspecialchars($movie['ReleaseDate']) ?></td>
-                    <td><?= htmlspecialchars($movie['Genre']) ?></td>
-                    <td>
-                        <form action="edit_movie.php" method="POST">
-                            <input type="hidden" name="MovieID" value="<?= htmlspecialchars($movie['MovieID']) ?>">
-                                <button name="edit">Edit</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
-                              <input type="hidden" name="MovieID" value="<?= htmlspecialchars($movie['MovieID']) ?>">
-                                    <button name="delete">Delete</button>
-                        </form>
-                    </td>
-                  </tr>
-            <?php endforeach; ?>
-          </table>
-      <?php endif; ?>
-    </center>
+
+  <body>
+
+    <div class="header">
+        <div class="header-content">
+            <h1>MSU Movie Center</h1>
+            <h4>Team Members: Manahil Imran, Anthony Dalauro, Jeanine Gomez, Angelee Sullivan-Quintana</h2>
+        </div>
+    </div>
+    
+    <div class="main-area">
+      <div class="error-box">
+        <h2>Database Error</h2>
+        <p>There was a problem accessing the database:</p>
+        <p><strong>Error Message:</strong> <?= htmlspecialchars($error_message) ?></p>
+        <a class="btn" href="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>">Try Again</a>
+      </div>
+    </div>  
+      
   </body>
 </html>
